@@ -8,11 +8,7 @@ namespace ManageMuseum.Controllers
 {
     public class UserController : Controller
     {
-        // GET: User
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
+
 
         public ActionResult Login()
         {
