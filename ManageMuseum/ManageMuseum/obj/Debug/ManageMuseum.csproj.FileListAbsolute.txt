@@ -82,3 +82,4 @@ C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\Man
 C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csproj.CoreCompileInputs.cache
 C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.dll
 C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.pdb
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\bin\FontAwesome.dll
