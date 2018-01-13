@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace ManageMuseum.Controllers
 {
     public class HomeController : Controller
@@ -26,5 +27,6 @@ namespace ManageMuseum.Controllers
 
             return View();
         }
+    
     }
 }
