@@ -13,7 +13,7 @@ namespace ManageMuseum.Controllers
         
         
         // GET: Login
-        public ActionResult Index()
+        public ActionResult ConfirmLogin()
         {
             return View();
         }
@@ -36,7 +36,7 @@ namespace ManageMuseum.Controllers
             }
            
 
-            return Content(userName);
+            return View();
         }
     }
 }
