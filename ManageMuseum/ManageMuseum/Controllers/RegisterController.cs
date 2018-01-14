@@ -18,7 +18,7 @@ namespace ManageMuseum.Controllers
         [HttpPost]
         public ActionResult Register(UserAccount userAccount)
         {
-            ViewBag.Roles = new SelectList(roles);
+            //ViewBag.Roles = new SelectList(roles);
             return Content("MIrone");
         }
     }
