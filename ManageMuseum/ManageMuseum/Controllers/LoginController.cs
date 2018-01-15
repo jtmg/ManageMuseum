@@ -21,6 +21,7 @@ namespace ManageMuseum.Controllers
         [HttpPost]
         public ActionResult ConfirmLogin(UserAccount user)
         {
+           
             string userName = user.Username;
             switch (userName)
             {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 
 namespace ManageMuseum.Models
-{   //isto não é o raio do decorator?
+{   //isto é o observer
     public class IUser
     {
         public string Username { get; set; }
