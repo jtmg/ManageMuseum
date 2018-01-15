@@ -14,7 +14,7 @@ namespace ManageMuseum.Models
         public string EventType { get; set; }
 
         //o decorator era os Iusers?
-        public IList<Decorator> DecorateList { get; set; }
+        public IList<IUser> UsersList { get; set; }
 
         //ligação entre os eventos e os espaços
         public IList<ISpace> Spaces { get; set; }
