@@ -15,5 +15,7 @@ namespace ManageMuseum.Models
         public DateTime EnDate { get; set; }
         public string Name { get; set; }
         public  string EventType { get; set; }
+        public virtual ICollection<UserAccount> Courses { get; set; }
+        public virtual ICollection<Space> Spaces { get; set; }
     }
 }

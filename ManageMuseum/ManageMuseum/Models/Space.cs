@@ -12,6 +12,7 @@ namespace ManageMuseum.Models
         public int Id { get; set; }
         public double Area { get; set; }
         public string Local { get; set; }
-        
+        public virtual ICollection<Event> Events { get; set; }
+
     }
 }

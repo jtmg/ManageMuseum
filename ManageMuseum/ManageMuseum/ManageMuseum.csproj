@@ -183,6 +183,14 @@
     <Compile Include="Migrations\201801151627045_sixth-Commit.Designer.cs">
       <DependentUpon>201801151627045_sixth-Commit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801151701134_septh-Commit.cs" />
+    <Compile Include="Migrations\201801151701134_septh-Commit.Designer.cs">
+      <DependentUpon>201801151701134_septh-Commit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801151712336_eighth-Commit.cs" />
+    <Compile Include="Migrations\201801151712336_eighth-Commit.Designer.cs">
+      <DependentUpon>201801151712336_eighth-Commit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ArtPiece.cs" />
     <Compile Include="Models\Catalog.cs" />
@@ -275,6 +283,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801151627045_sixth-Commit.resx">
       <DependentUpon>201801151627045_sixth-Commit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801151701134_septh-Commit.resx">
+      <DependentUpon>201801151701134_septh-Commit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801151712336_eighth-Commit.resx">
+      <DependentUpon>201801151712336_eighth-Commit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
