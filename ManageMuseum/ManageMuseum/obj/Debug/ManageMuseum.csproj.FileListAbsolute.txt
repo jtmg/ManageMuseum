@@ -83,3 +83,14 @@ C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\Man
 C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.dll
 C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.pdb
 C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\bin\FontAwesome.dll
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\bin\EntityFramework.dll
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\bin\EntityFramework.SqlServer.dll
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\bin\EntityFramework.xml
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\bin\EntityFramework.SqlServer.xml
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.Migrations.firstCommit.resources
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csproj.GenerateResource.Cache
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.Migrations.secondCommit.resources
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.Migrations.thirdCommit.resources
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.Migrations.fourthCommit.resources
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.Migrations.fifthCommit.resources
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.Migrations.sixthCommit.resources
