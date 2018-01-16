@@ -23,20 +23,23 @@ namespace ManageMuseum.Controllers
         {
            
             string userName = user.Username;
-            switch (userName)
+            string password = user.Password;
+            
+            if (new UserManager().IsValid(userName, password))
             {
-                case "manel":
+                var role = new UserManager().Role(userName, password);
+                switch (role)
                 {
-                    return RedirectToAction("Index","ExhibitionShedule");
-                }
-                case "igor":
-                {
-                    return RedirectToAction("Index", "SheduleEvent");
+                    case 1:
+                    {
+                            return RedirectToAction("Index", "SheduleEvent");
                     }
-                 
+                    case 2:
+                    {
+                        return RedirectToAction("Index", "ExhibitionShedule");
+                    }
+                }
             }
-           
-
             return View();
         }
     }
