@@ -12,8 +12,7 @@ namespace ManageMuseum.Models
         public DbSet<UserAccount> UserAccounts { get; set; }
         public DbSet<ArtPiece> ArtPieces { get; set; }
         public DbSet<Event> Events { get; set; }
-
-        public DbSet<EventRequest> EventRequests { get; set; }
+        public DbSet<EventState> EventStates { get; set; }
         public DbSet<OutSideSpace> OutSideSpaces { get; set; }
         public DbSet<EventType> EventTypes { get; set; }
         public DbSet<RoomMuseum> RoomMuseums { get; set; }
