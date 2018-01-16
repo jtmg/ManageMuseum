@@ -18,11 +18,23 @@ namespace ManageMuseum.Migrations
                         Year = c.DateTime(nullable: false),
                         Author = c.String(),
                         State = c.String(),
+                        ArtPieceState_Id = c.Int(),
                         RoomMuseum_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.ArtPieceStates", t => t.ArtPieceState_Id)
                 .ForeignKey("dbo.RoomMuseums", t => t.RoomMuseum_Id)
+                .Index(t => t.ArtPieceState_Id)
                 .Index(t => t.RoomMuseum_Id);
+            
+            CreateTable(
+                "dbo.ArtPieceStates",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.RoomMuseums",
@@ -45,44 +57,20 @@ namespace ManageMuseum.Migrations
                         StartDate = c.DateTime(nullable: false),
                         EnDate = c.DateTime(nullable: false),
                         Name = c.String(),
+                        EventState_Id = c.Int(),
                         EventType_Id = c.Int(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.EventTypes", t => t.EventType_Id)
-                .Index(t => t.EventType_Id);
-            
-            CreateTable(
-                "dbo.EventRequests",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Event_Id = c.Int(),
                         UserAccount_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Events", t => t.Event_Id)
+                .ForeignKey("dbo.EventStates", t => t.EventState_Id)
+                .ForeignKey("dbo.EventTypes", t => t.EventType_Id)
                 .ForeignKey("dbo.UserAccounts", t => t.UserAccount_Id)
-                .Index(t => t.Event_Id)
+                .Index(t => t.EventState_Id)
+                .Index(t => t.EventType_Id)
                 .Index(t => t.UserAccount_Id);
             
             CreateTable(
-                "dbo.UserAccounts",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(nullable: false),
-                        LastName = c.String(nullable: false),
-                        Username = c.String(nullable: false),
-                        Password = c.String(nullable: false),
-                        ConfirmPassword = c.String(),
-                        Role_Id = c.Int(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Roles", t => t.Role_Id)
-                .Index(t => t.Role_Id);
-            
-            CreateTable(
-                "dbo.Roles",
+                "dbo.EventStates",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -110,31 +98,59 @@ namespace ManageMuseum.Migrations
                 .ForeignKey("dbo.Events", t => t.Event_Id)
                 .Index(t => t.Event_Id);
             
+            CreateTable(
+                "dbo.UserAccounts",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        FirstName = c.String(nullable: false),
+                        LastName = c.String(nullable: false),
+                        Username = c.String(nullable: false),
+                        Password = c.String(nullable: false),
+                        ConfirmPassword = c.String(),
+                        Role_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Roles", t => t.Role_Id)
+                .Index(t => t.Role_Id);
+            
+            CreateTable(
+                "dbo.Roles",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
         }
         
         public override void Down()
         {
+            DropForeignKey("dbo.UserAccounts", "Role_Id", "dbo.Roles");
+            DropForeignKey("dbo.Events", "UserAccount_Id", "dbo.UserAccounts");
             DropForeignKey("dbo.RoomMuseums", "Event_Id", "dbo.Events");
             DropForeignKey("dbo.OutSideSpaces", "Event_Id", "dbo.Events");
             DropForeignKey("dbo.Events", "EventType_Id", "dbo.EventTypes");
-            DropForeignKey("dbo.UserAccounts", "Role_Id", "dbo.Roles");
-            DropForeignKey("dbo.EventRequests", "UserAccount_Id", "dbo.UserAccounts");
-            DropForeignKey("dbo.EventRequests", "Event_Id", "dbo.Events");
+            DropForeignKey("dbo.Events", "EventState_Id", "dbo.EventStates");
             DropForeignKey("dbo.ArtPieces", "RoomMuseum_Id", "dbo.RoomMuseums");
-            DropIndex("dbo.OutSideSpaces", new[] { "Event_Id" });
+            DropForeignKey("dbo.ArtPieces", "ArtPieceState_Id", "dbo.ArtPieceStates");
             DropIndex("dbo.UserAccounts", new[] { "Role_Id" });
-            DropIndex("dbo.EventRequests", new[] { "UserAccount_Id" });
-            DropIndex("dbo.EventRequests", new[] { "Event_Id" });
+            DropIndex("dbo.OutSideSpaces", new[] { "Event_Id" });
+            DropIndex("dbo.Events", new[] { "UserAccount_Id" });
             DropIndex("dbo.Events", new[] { "EventType_Id" });
+            DropIndex("dbo.Events", new[] { "EventState_Id" });
             DropIndex("dbo.RoomMuseums", new[] { "Event_Id" });
             DropIndex("dbo.ArtPieces", new[] { "RoomMuseum_Id" });
-            DropTable("dbo.OutSideSpaces");
-            DropTable("dbo.EventTypes");
+            DropIndex("dbo.ArtPieces", new[] { "ArtPieceState_Id" });
             DropTable("dbo.Roles");
             DropTable("dbo.UserAccounts");
-            DropTable("dbo.EventRequests");
+            DropTable("dbo.OutSideSpaces");
+            DropTable("dbo.EventTypes");
+            DropTable("dbo.EventStates");
             DropTable("dbo.Events");
             DropTable("dbo.RoomMuseums");
+            DropTable("dbo.ArtPieceStates");
             DropTable("dbo.ArtPieces");
         }
     }
