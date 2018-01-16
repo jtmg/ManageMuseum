@@ -159,14 +159,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201801160158173_1st.cs" />
-    <Compile Include="Migrations\201801160158173_1st.Designer.cs">
-      <DependentUpon>201801160158173_1st.cs</DependentUpon>
+    <Compile Include="Migrations\201801161903577_1st.cs" />
+    <Compile Include="Migrations\201801161903577_1st.Designer.cs">
+      <DependentUpon>201801161903577_1st.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ArtPiece.cs" />
+    <Compile Include="Models\ArtPieceState.cs" />
     <Compile Include="Models\Event.cs" />
-    <Compile Include="Models\EventRequest.cs" />
+    <Compile Include="Models\EventState.cs" />
     <Compile Include="Models\EventType.cs" />
     <Compile Include="Models\IEvent.cs" />
     <Compile Include="Models\ISpace.cs" />
@@ -241,8 +242,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801160158173_1st.resx">
-      <DependentUpon>201801160158173_1st.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801161903577_1st.resx">
+      <DependentUpon>201801161903577_1st.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

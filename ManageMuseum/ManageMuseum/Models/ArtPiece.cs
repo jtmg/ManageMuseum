@@ -20,6 +20,7 @@ namespace ManageMuseum.Models
         public DateTime Year { get; set; }
         public string Author { get; set; }
         public string State { get; set; }
+        public ArtPieceState ArtPieceState { get; set; }
 
     }
 }
