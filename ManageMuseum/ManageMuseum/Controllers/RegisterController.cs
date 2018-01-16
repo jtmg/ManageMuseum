@@ -21,6 +21,8 @@ namespace ManageMuseum.Controllers
         {
             OurContectDb db = new OurContectDb();
             
+
+           
             
 
             return Content("MIrone");
