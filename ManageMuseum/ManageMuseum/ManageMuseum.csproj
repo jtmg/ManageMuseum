@@ -159,17 +159,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201801160008194_delete-database.cs" />
-    <Compile Include="Migrations\201801160008194_delete-database.Designer.cs">
-      <DependentUpon>201801160008194_delete-database.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801160027137_first-Mig.cs" />
-    <Compile Include="Migrations\201801160027137_first-Mig.Designer.cs">
-      <DependentUpon>201801160027137_first-Mig.cs</DependentUpon>
+    <Compile Include="Migrations\201801160158173_1st.cs" />
+    <Compile Include="Migrations\201801160158173_1st.Designer.cs">
+      <DependentUpon>201801160158173_1st.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ArtPiece.cs" />
-    <Compile Include="Models\Catalog.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\EventRequest.cs" />
     <Compile Include="Models\EventType.cs" />
@@ -178,6 +173,7 @@
     <Compile Include="Models\IUser.cs" />
     <Compile Include="Models\OurContectDb.cs" />
     <Compile Include="Models\OutSideSpace.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Models\RoomMuseum.cs" />
     <Compile Include="Models\UserAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -245,11 +241,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801160008194_delete-database.resx">
-      <DependentUpon>201801160008194_delete-database.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801160027137_first-Mig.resx">
-      <DependentUpon>201801160027137_first-Mig.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801160158173_1st.resx">
+      <DependentUpon>201801160158173_1st.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

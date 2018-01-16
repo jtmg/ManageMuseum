@@ -13,7 +13,7 @@ namespace ManageMuseum.Models
         public double Area { get; set; }
         public int Floor { get; set; }
 
-        public Event IdEvent { get; set; }
+        public Event Event { get; set; }
 
         public ICollection<ArtPiece> ArtPieces { get; set; }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -18,7 +19,9 @@ namespace ManageMuseum.Controllers
         [HttpPost]
         public ActionResult Register(UserAccount userAccount)
         {
-            //ViewBag.Roles = new SelectList(roles);
+            OurContectDb db = new OurContectDb();
+            
+
             return Content("MIrone");
         }
     }

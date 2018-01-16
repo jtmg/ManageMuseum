@@ -10,6 +10,6 @@ namespace ManageMuseum.Models
     {
         [Key]
         public int Id { get; set; }
-        public Event IdEvent { get; set; }
+        public Event Event { get; set; }
     }
 }

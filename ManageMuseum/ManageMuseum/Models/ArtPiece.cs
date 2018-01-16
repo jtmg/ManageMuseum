@@ -15,8 +15,7 @@ namespace ManageMuseum.Models
         public string Description { get; set; }
         public double Dimension { get; set; }
 
-        public Catalog IdCatalog { get; set; }
-        public RoomMuseum IdRoomMuseum { get; set; }
+        public RoomMuseum RoomMuseum { get; set; }
         //vai dar probelmas se for para inserir na base de dados porque este formato é maior que a BD suporta
         public DateTime Year { get; set; }
         public string Author { get; set; }
