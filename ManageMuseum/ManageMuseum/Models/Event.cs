@@ -14,6 +14,11 @@ namespace ManageMuseum.Models
         public DateTime StartDate { get; set; }
         public DateTime EnDate { get; set; }
         public string Name { get; set; }
-        public  string EventType { get; set; }
+        public  EventType EventType { get; set; }
+
+        public ICollection<EventRequest> EventRequests { get; set; }
+        public ICollection<RoomMuseum> RoomMuseums { get; set; }
+        public ICollection<OutSideSpace> OutSideSpaces { get; set; }
+
     }
 }

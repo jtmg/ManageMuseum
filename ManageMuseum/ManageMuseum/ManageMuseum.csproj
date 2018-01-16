@@ -159,39 +159,22 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201801151556564_first-Commit.cs" />
-    <Compile Include="Migrations\201801151556564_first-Commit.Designer.cs">
-      <DependentUpon>201801151556564_first-Commit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801151603095_second-Commit.cs" />
-    <Compile Include="Migrations\201801151603095_second-Commit.Designer.cs">
-      <DependentUpon>201801151603095_second-Commit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801151605106_third-Commit.cs" />
-    <Compile Include="Migrations\201801151605106_third-Commit.Designer.cs">
-      <DependentUpon>201801151605106_third-Commit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801151610180_fourth-Commit.cs" />
-    <Compile Include="Migrations\201801151610180_fourth-Commit.Designer.cs">
-      <DependentUpon>201801151610180_fourth-Commit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801151612192_fifth-Commit.cs" />
-    <Compile Include="Migrations\201801151612192_fifth-Commit.Designer.cs">
-      <DependentUpon>201801151612192_fifth-Commit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801151627045_sixth-Commit.cs" />
-    <Compile Include="Migrations\201801151627045_sixth-Commit.Designer.cs">
-      <DependentUpon>201801151627045_sixth-Commit.cs</DependentUpon>
+    <Compile Include="Migrations\201801160158173_1st.cs" />
+    <Compile Include="Migrations\201801160158173_1st.Designer.cs">
+      <DependentUpon>201801160158173_1st.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ArtPiece.cs" />
-    <Compile Include="Models\Catalog.cs" />
     <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\EventRequest.cs" />
+    <Compile Include="Models\EventType.cs" />
     <Compile Include="Models\IEvent.cs" />
     <Compile Include="Models\ISpace.cs" />
     <Compile Include="Models\IUser.cs" />
     <Compile Include="Models\OurContectDb.cs" />
-    <Compile Include="Models\Space.cs" />
+    <Compile Include="Models\OutSideSpace.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\RoomMuseum.cs" />
     <Compile Include="Models\UserAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -258,23 +241,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801151556564_first-Commit.resx">
-      <DependentUpon>201801151556564_first-Commit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801151603095_second-Commit.resx">
-      <DependentUpon>201801151603095_second-Commit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801151605106_third-Commit.resx">
-      <DependentUpon>201801151605106_third-Commit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801151610180_fourth-Commit.resx">
-      <DependentUpon>201801151610180_fourth-Commit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801151612192_fifth-Commit.resx">
-      <DependentUpon>201801151612192_fifth-Commit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801151627045_sixth-Commit.resx">
-      <DependentUpon>201801151627045_sixth-Commit.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801160158173_1st.resx">
+      <DependentUpon>201801160158173_1st.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

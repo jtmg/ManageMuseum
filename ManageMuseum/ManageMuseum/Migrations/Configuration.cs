@@ -1,3 +1,5 @@
+using ManageMuseum.Models;
+
 namespace ManageMuseum.Migrations
 {
     using System;
@@ -18,6 +20,14 @@ namespace ManageMuseum.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+            //context.UserAccounts.AddOrUpdate(x => x.FirstName,
+            //    new UserAccount() { FirstName = "Jessica", LastName = "Franco", Username = "jsfranco", Password = "igualparatodos", Role = "spacemanager" },
+            //    new UserAccount() { FirstName = "Tiago", LastName = "Gouveia", Username = "jtmg", Password = "igualparatodos", Role = "artpiecemanager" },
+            //    new UserAccount() { FirstName = "Andre", LastName = "Figueira", Username = "ffigueira", Password = "igualparatodos", Role = "artpiecemanager" }
+            //);
+            //context.SaveChanges();
+
+            
         }
     }
 }
