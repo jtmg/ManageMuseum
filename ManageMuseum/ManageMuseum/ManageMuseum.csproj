@@ -225,6 +225,7 @@
     <Content Include="Views\ExhibitionShedule\Index.cshtml" />
     <Content Include="Views\Login\ConfirmLogin.cshtml" />
     <Content Include="Views\Register\Register.cshtml" />
+    <Content Include="Views\ExhibitionShedule\ShowRequestsList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
