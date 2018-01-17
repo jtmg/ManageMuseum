@@ -1,7 +1,7 @@
 ﻿@model ManageMuseum.Models.Event
 
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_SpaceManagerSharedLayout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -12,13 +12,23 @@
     <title>ShowRequestsList</title>
 </head>
 <body>
-<div>
-    @*@foreach (var item in ViewBag.Data)
-    {
-        <p> @item.EventState </p>
+<div class="container">
+    
+    
+        <table class="table table-hover">
+            <tr>
+                <th> Name </th><th> Type </th><th> Start Date </th><th> Id Event </th>
+            </tr>
         
-    }*@
-    <p>@ViewBag.Data</p>
+            @foreach (var item in ViewBag.Data)
+            {
+                <tr>
+                    <td>@item.Name</td><td>@item.EventType.Name</td><td>@item.StartDate</td><td>@item.Id</td>
+                </tr>
+            }       
+        </table>
+   
+
 </div>
 </body>
 </html>
