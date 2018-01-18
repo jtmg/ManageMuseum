@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -34,7 +35,10 @@ namespace ManageMuseum.Controllers
             var getEventTypeid = getEventTypeRow.Id;
             var insertEventType = new EventType(){Name = events.EventType, Id = getEventTypeid};
             var eventState = new EventState(){Name = "poraprovar",Id = 1};
-            var userId = Request.Cookies["UserId"];
+            var userId = Int32.Parse(Request.Cookies["UserId"].Value);
+            var userAccountValues = db.UserAccounts.Include(d=>d.Role).FirstOrDefault(s => s.Id == userId);
+            var userAccount = new UserAccount(){Password = userAccountValues.Password, Role = userAccountValues.Role,Id = userAccountValues.Id,Username = userAccountValues.Username,FirstName = userAccountValues.FirstName,LastName = userAccountValues.LastName};
+           
             var finalEvent = new Event() {Name = events.Name, StartDate = events.StartDate, EnDate = events.EnDate,Description = events.Description,EventType = insertEventType,EventState = eventState};
 
             db.Events.Add(finalEvent);
