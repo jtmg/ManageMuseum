@@ -167,6 +167,10 @@
     <Compile Include="Migrations\201801180004476_2nd.Designer.cs">
       <DependentUpon>201801180004476_2nd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801181715198_3rd.cs" />
+    <Compile Include="Migrations\201801181715198_3rd.Designer.cs">
+      <DependentUpon>201801181715198_3rd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ArtPiece.cs" />
     <Compile Include="Models\ArtPieceState.cs" />
@@ -177,6 +181,7 @@
     <Compile Include="Models\IEvent.cs" />
     <Compile Include="Models\ISpace.cs" />
     <Compile Include="Models\IUser.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Models\OurContectDb.cs" />
     <Compile Include="Models\OutSideSpace.cs" />
     <Compile Include="Models\Role.cs" />
@@ -254,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801180004476_2nd.resx">
       <DependentUpon>201801180004476_2nd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801181715198_3rd.resx">
+      <DependentUpon>201801181715198_3rd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
