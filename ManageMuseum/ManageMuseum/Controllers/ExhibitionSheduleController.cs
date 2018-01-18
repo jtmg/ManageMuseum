@@ -24,11 +24,12 @@ namespace ManageMuseum.Controllers
             ViewBag.Data =  query;
             return View();
         }
+
         [HttpPost]
         public ActionResult EventRequestDetails()
         {
-            var eventID = collection[""];
-            return Content();
+            return View();
         }
+
     }
 }

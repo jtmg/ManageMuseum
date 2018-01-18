@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -9,17 +11,19 @@ namespace ManageMuseum.Controllers
 {
     public class RegisterController : Controller
     {
-        private string[] roles = {"Art piece manager","space manager"}; 
+        private OurContectDb db = new OurContectDb();
         public ActionResult Register()
         {
-            ViewBag.Roles = new SelectList(roles);
+            var roles = db.Roles.ToList();
+            ViewBag.Roles = new SelectList(roles,"Name","Name");
             return View();
         }
         [HttpPost]
-        public ActionResult Register(UserAccount userAccount)
+        public ActionResult Register(RegisterViewModel userAccount)
         {
-            //ViewBag.Roles = new SelectList(roles);
-            return Content("MIrone");
+            
+
+            return View();
         }
     }
 }
