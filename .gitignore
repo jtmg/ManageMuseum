@@ -3,3 +3,6 @@
 *.ide-wal
 *.ide
 *.ide
+ManageMuseum/ManageMuseum/App_Data/ManageMuseum.Models.OurContectDb.mdf
+ManageMuseum/ManageMuseum/App_Data/ManageMuseum.Models.OurContectDb.mdf
+ManageMuseum/ManageMuseum/App_Data/ManageMuseum.Models.OurContectDb_log.ldf

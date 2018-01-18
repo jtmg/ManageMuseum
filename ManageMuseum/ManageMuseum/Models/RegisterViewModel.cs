@@ -20,6 +20,7 @@ namespace ManageMuseum.Models
         [Required(ErrorMessage = "Password is Required")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+
         [Required(ErrorMessage = "Role is Required")]
         public string Role { get; set; }
 
