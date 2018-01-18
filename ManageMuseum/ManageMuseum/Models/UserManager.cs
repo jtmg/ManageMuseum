@@ -28,5 +28,13 @@ namespace ManageMuseum.Models
                 }
             
         }
+
+        public int GetId(string name, string password)
+        {
+            using (var db = new OurContectDb())
+            {
+                return db.UserAccounts.Where(u => u.Username == name && u.Password == password).Select(p => p.Id).First();
+            }
+        }
     }
 }

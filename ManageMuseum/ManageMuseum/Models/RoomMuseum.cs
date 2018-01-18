@@ -9,7 +9,7 @@ namespace ManageMuseum.Models
     public class RoomMuseum
     {
         [Key]
-        public int Id { get; set; }
+        public int Id { get; set; }//number of the room
         public double Area { get; set; }
         public int Floor { get; set; }
 

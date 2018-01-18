@@ -163,12 +163,17 @@
     <Compile Include="Migrations\201801161903577_1st.Designer.cs">
       <DependentUpon>201801161903577_1st.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801180004476_2nd.cs" />
+    <Compile Include="Migrations\201801180004476_2nd.Designer.cs">
+      <DependentUpon>201801180004476_2nd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ArtPiece.cs" />
     <Compile Include="Models\ArtPieceState.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\EventState.cs" />
     <Compile Include="Models\EventType.cs" />
+    <Compile Include="Models\EventViewModel.cs" />
     <Compile Include="Models\IEvent.cs" />
     <Compile Include="Models\ISpace.cs" />
     <Compile Include="Models\IUser.cs" />
@@ -221,7 +226,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_ArtPieceManegerSharedLayout.cshtml" />
     <Content Include="Views\Shared\_SpaceManagerSharedLayout.cshtml" />
-    <Content Include="Views\SheduleEvent\Index.cshtml" />
+    <Content Include="Views\SheduleEvent\SheduleEvent.cshtml" />
     <Content Include="Views\ExhibitionShedule\Index.cshtml" />
     <Content Include="Views\Login\ConfirmLogin.cshtml" />
     <Content Include="Views\Register\Register.cshtml" />
@@ -246,6 +251,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201801161903577_1st.resx">
       <DependentUpon>201801161903577_1st.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801180004476_2nd.resx">
+      <DependentUpon>201801180004476_2nd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

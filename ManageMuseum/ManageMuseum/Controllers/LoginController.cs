@@ -28,18 +28,30 @@ namespace ManageMuseum.Controllers
             if (new UserManager().IsValid(userName, password))
             {
                 var role = new UserManager().Role(userName, password);
+                var userId = new UserManager().GetId(userName, password);
+
                 switch (role)
                 {
                     case 1:
                     {
-                            return RedirectToAction("Index", "SheduleEvent");
-                    }
+                        //HttpCookie cookie = Request.Cookies["UserId"];
+                        //if (!cookie.Values.ToString().Equals(userId.ToString()))
+                        //{
+                        //        cookie = new HttpCookie("UserId");
+                        //    cookie.Values["UserId"] = userId.ToString();
+                        //}
+
+
+
+                        return RedirectToAction("SheduleEvent", "SheduleEvent");
+                        }
                     case 2:
-                    {
-                        return RedirectToAction("Index", "ExhibitionShedule");
-                    }
+                        {
+                            return RedirectToAction("Index", "ExhibitionShedule");
+                        }
                 }
             }
+
             return View();
         }
     }
