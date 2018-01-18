@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -32,21 +33,18 @@ namespace ManageMuseum.Controllers
         {
             var eventType = events.EventType;
             var getEventTypeRow = db.EventTypes.FirstOrDefault(s => s.Name == eventType);
-            var getEventTypeid = getEventTypeRow.Id;
-            var insertEventType = new EventType(){Name = events.EventType, Id = getEventTypeid};
-            var eventState = new EventState(){Name = "poraprovar",Id = 1};
+            var eventState = db.EventStates.Where(s => s.Id == 1).Single();
             var userId = Int32.Parse(Request.Cookies["UserId"].Value);
-            var userAccountValues = db.UserAccounts.Include(d=>d.Role).FirstOrDefault(s => s.Id == userId);
-            var userAccount = new UserAccount(){Password = userAccountValues.Password, Role = userAccountValues.Role,Id = userAccountValues.Id,Username = userAccountValues.Username,FirstName = userAccountValues.FirstName,LastName = userAccountValues.LastName};
-           
-            var finalEvent = new Event() {Name = events.Name, StartDate = events.StartDate, EnDate = events.EnDate,Description = events.Description,EventType = insertEventType,EventState = eventState};
+            var userAccount = db.UserAccounts.Include(d=>d.Role).FirstOrDefault(s => s.Id == userId);
+            var finalEvent = new Event() {Name = events.Name, StartDate = events.StartDate, EnDate = events.EnDate,Description = events.Description,EventType = getEventTypeRow, EventState = eventState,UserAccount = userAccount};
+
 
             db.Events.Add(finalEvent);
             db.SaveChanges();
 
 
 
-            return View();
+            return Content("hahahahaahahaha");
         }
 
     }
