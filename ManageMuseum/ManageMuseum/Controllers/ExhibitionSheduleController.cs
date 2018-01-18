@@ -21,12 +21,7 @@ namespace ManageMuseum.Controllers
             var db = new OurContectDb();
 
             var query = db.Events.Include(d => d.EventState).Include(d => d.EventType).Where(d => d.EventState.Id == 1);
-            ViewBag.Data = query;
-
-            
-            
-            
-            
+            ViewBag.Data =  query;
             return View();
         }
     }

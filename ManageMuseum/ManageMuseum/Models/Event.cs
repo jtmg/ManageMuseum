@@ -17,6 +17,7 @@ namespace ManageMuseum.Models
         public EventType EventType { get; set; }
         public EventState EventState { get; set; }
 
+        public string Description { get; set; }
         public UserAccount UserAccount { get; set; }
         public ICollection<RoomMuseum> RoomMuseums { get; set; }
         public ICollection<OutSideSpace> OutSideSpaces { get; set; }
