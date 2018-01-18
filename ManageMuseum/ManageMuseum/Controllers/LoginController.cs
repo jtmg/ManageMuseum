@@ -34,13 +34,17 @@ namespace ManageMuseum.Controllers
                 {
                     case 1:
                     {
-                        //HttpCookie cookie = Request.Cookies["UserId"];
-                        //if (!cookie.Values.ToString().Equals(userId.ToString()))
-                        //{
-                        //        cookie = new HttpCookie("UserId");
-                        //    cookie.Values["UserId"] = userId.ToString();
-                        //}
-
+                        HttpCookie cookie = Request.Cookies["UserId"];
+                        if (cookie ==null)
+                        {
+                            cookie = new HttpCookie("UserId");
+                            cookie.Value = userId.ToString();
+                        }
+                        else
+                        {
+                            cookie.Value = userId.ToString();
+                        }
+                        Response.Cookies.Add(cookie);
 
 
                         return RedirectToAction("SheduleEvent", "SheduleEvent");
