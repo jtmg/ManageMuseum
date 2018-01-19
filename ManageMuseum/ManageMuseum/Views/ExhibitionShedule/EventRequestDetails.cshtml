@@ -1,7 +1,7 @@
-﻿@{
+﻿@using ManageMuseum.Models
+@{
     Layout = "~/Views/Shared/_SpaceManagerSharedLayout.cshtml";
 }
-
 <!DOCTYPE html>
 
 <html>
@@ -11,13 +11,20 @@
 </head>
 <body>
     <div>
-        <h1> Chegou aos detalhes de evento</h1>
+        <h2> Event Number: @ViewData["EventSelected"]</h2>
+        <hr/>
+        <p>From User: (@ViewData["EventUserId"]) @ViewData["EventUserFName"] @ViewData["EventUserLName"]</p>
+        <h4>Name: @ViewData["EventName"]</h4>
+        <h4>Event Type: @ViewData["EventType"]</h4>
+        <h4>Start Date: @ViewData["EventStartDate"]</h4>
+        <h4>End Date: @ViewData["EventEndDate"]</h4>
+        <h4>Description: @ViewData["EventDescription"]</h4>
+        <hr />
+        <p>
+            @Html.ActionLink(linkText: "Back to List of Pending Events", actionName: "ShowRequestsList")
+        </p>
     </div>
 
-    <p> Event Number: @ViewData["EventIdSelected"]</p>
 
-    <p>
-        @Html.ActionLink(linkText: "Back to List of Pending Events", actionName: "ShowRequestsList")
-    </p>
-</body>
-</html>
+        </body>
+        </html>

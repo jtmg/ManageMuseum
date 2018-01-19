@@ -30,6 +30,6 @@ namespace ManageMuseum.Models
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
 
-        public virtual ICollection<Event> EventRequests { get; set; }
+        public virtual ICollection<Event> Events { get; set; }
     }
 }

@@ -25,8 +25,6 @@ namespace ManageMuseum.Controllers
 
         public ActionResult ShowRequestsList()
         {
-            var db = new OurContectDb();
-
             var query = db.Events.Include(d => d.EventState).Include(d => d.EventType).Where(d => d.EventState.Id == 1).ToList();
             ViewBag.Data = query;
             return View();
@@ -40,8 +38,26 @@ namespace ManageMuseum.Controllers
         public ActionResult EventRequestDetails(string eventId)
         {
             var EventIdSelected = Int32.Parse(eventId);
-            ViewData["EventIdSelected"] = EventIdSelected;
+
+            var queryEventDetails = db.Events.Include(d=>d.UserAccount).Include(d => d.EventState).Include(d => d.EventType).Single(s => s.Id == EventIdSelected);
+            ViewBag.evento = queryEventDetails;
+            ViewData["EventUserId"] = queryEventDetails.UserAccount.Id;
+            ViewData["EventUserFName"] = queryEventDetails.UserAccount.FirstName;
+            ViewData["EventUserLName"] = queryEventDetails.UserAccount.LastName;
+            ViewData["EventSelected"] = queryEventDetails.Id;
+            ViewData["EventName"] = queryEventDetails.Name;
+            ViewData["EventType"] = queryEventDetails.EventType.Name;
+            ViewData["EventStartDate"] = queryEventDetails.StartDate;
+            ViewData["EventEndDate"] = queryEventDetails.EnDate;
+            ViewData["EventDescription"] = queryEventDetails.Description;
+
             return View();
+        }
+
+        public ActionResult Test()
+        {
+            return Content("dd");
         }
     }
 }
+//var queryEventDetails = db.Events.Include(d => d.UserAccount).Include(d => d.EventState).Include(d => d.EventType).Where(s => s.Id == EventIdSelected).ToList();
