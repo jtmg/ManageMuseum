@@ -141,3 +141,4 @@ D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMus
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csproj.CoreCompileInputs.cache
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.dll
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.pdb
+D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csprojResolveAssemblyReference.cache
