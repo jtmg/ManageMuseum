@@ -1,5 +1,4 @@
-﻿@model ManageMuseum.Models.Event
-
+﻿
 @{
     Layout = "~/Views/Shared/_SpaceManagerSharedLayout.cshtml";
 }
@@ -17,37 +16,23 @@
     
         <table class="table table-hover">
             <tr>
-<<<<<<< HEAD
-                <th> # </th><th> Name </th><th> Type </th><th> Start Date </th><th> Event Number </th>
-=======
-                <th> Name </th><th> Type </th><th> Start Date </th><th> Id Event </th>
->>>>>>> Tiago-Work-Stage2
+                <th> # </th><th> Name </th><th> Type </th><th> Start Date </th><th> End Date </th><th> Event Number </th>
             </tr>
         
             @foreach (var item in ViewBag.Data)
             {
                 <tr>
-<<<<<<< HEAD
-                    <input type="hidden" name="EventId" value="@item.Id"/>
-                    @*@Html.HiddenFor(item => item.Id);*@
-                    <td>@Html.ActionLink("View Details", "EventRequestDetails", "ExhibitionShedule",item.Id)</td>
+                    @*<td>@Html.ActionLink(linkText: "View Details", actionName: "EventRequestDetails", controllerName: "ExhibitionShedule", new{ EventId = item.Id }, htmlAttributes: null)
+                    |   @Html.ActionLink(linkText: "Approve", actionName: "EventRequestApprove", controllerName: "ExhibitionShedule", new { EventId = item.Id }, htmlAttributes: null)
+                    </td>*@
                     <td>@item.Name</td>
                     <td>@item.EventType.Name</td>
                     <td>@item.StartDate</td>
+                    <td>@item.EnDate</td>
                     <td>@item.Id</td>
                 </tr>
-
-               
-=======
-                    <td>@item.Name</td><td>@item.EventType.Name</td><td>@item.StartDate</td><td>@item.Id</td>
-                </tr>
->>>>>>> Tiago-Work-Stage2
             }       
         </table>
 </div>
 </body>
 </html>
-<<<<<<< HEAD
-
-=======
->>>>>>> Tiago-Work-Stage2
