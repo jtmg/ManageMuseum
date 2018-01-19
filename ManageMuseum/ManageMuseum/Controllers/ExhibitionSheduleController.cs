@@ -30,9 +30,17 @@ namespace ManageMuseum.Controllers
             return View();
         }
 
-        public ActionResult EventRequestApprove()
+        public ActionResult EventRequestApprove(string eventId)
         {
-            return Content("Aprovar pedido");
+            var EventIdApprove = Int32.Parse(eventId);
+
+            EventState approvedState = db.EventStates.First(d => d.Name == "aceites");
+            
+            Event update = db.Events.Include(v => v.EventState).First(d => d.Id == EventIdApprove);
+            update.EventState = approvedState;
+            db.SaveChanges();
+            //FALTA COLOCAR AQUI UMA MENSAGEM DE AVISO QUE O PEDIDO DE EVENTO FOI APROVADO
+            return Redirect("ShowRequestsList");
         }
 
         public ActionResult EventRequestDetails(string eventId)
@@ -52,11 +60,6 @@ namespace ManageMuseum.Controllers
             ViewData["EventDescription"] = queryEventDetails.Description;
 
             return View();
-        }
-
-        public ActionResult Test()
-        {
-            return Content("dd");
         }
     }
 }
