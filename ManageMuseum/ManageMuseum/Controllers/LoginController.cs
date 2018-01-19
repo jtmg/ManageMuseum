@@ -51,7 +51,7 @@ namespace ManageMuseum.Controllers
                         }
                     case 2:
                         {
-                            return RedirectToAction("Index", "ExhibitionShedule");
+                            return RedirectToAction("SheduleExhibition", "ExhibitionShedule");
                         }
                 }
             }
