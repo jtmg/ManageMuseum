@@ -10,15 +10,30 @@ namespace ManageMuseum.Controllers
 {
     public class ExhibitionSheduleController : Controller
     {
+        private OurContectDb db = new OurContectDb();
         // GET: ExhibitionShedule
-        public ActionResult Index()
+        public ActionResult SheduleExhibition()
         {
+            var queryEventTypes = db.EventTypes.ToList();
+            ViewBag.EventType = new SelectList(queryEventTypes, "Name", "Name");
+
+            var queryListSpaces = db.RoomMuseums.ToList();
+            ViewBag.ListSpaces = new SelectList(queryListSpaces, "Id", "Id");
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult SheduleExhibition(EventViewModel eventView)
+        {
+
+
             return View();
         }
 
         public ActionResult ShowRequestsList()
         {
-            var db = new OurContectDb();
+           
 
             var query = db.Events.Include(d => d.EventState).Include(d => d.EventType).Where(d => d.EventState.Id == 1);
             ViewBag.Data =  query;

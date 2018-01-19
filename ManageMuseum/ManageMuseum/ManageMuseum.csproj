@@ -232,7 +232,7 @@
     <Content Include="Views\Shared\_ArtPieceManegerSharedLayout.cshtml" />
     <Content Include="Views\Shared\_SpaceManagerSharedLayout.cshtml" />
     <Content Include="Views\SheduleEvent\SheduleEvent.cshtml" />
-    <Content Include="Views\ExhibitionShedule\Index.cshtml" />
+    <Content Include="Views\ExhibitionShedule\SheduleExhibition.cshtml" />
     <Content Include="Views\Login\ConfirmLogin.cshtml" />
     <Content Include="Views\Register\Register.cshtml" />
     <Content Include="Views\ExhibitionShedule\ShowRequestsList.cshtml" />
