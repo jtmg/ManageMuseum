@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/_SpaceManagerSharedLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EventRequestDetails</title>
+</head>
+<body>
+    <div>
+        <h1> Chegou aos detalhes de evento</h1>
+    </div>
+
+    <p> Event Number: @ViewData["EventIdSelected"]</p>
+
+    <p>
+        @Html.ActionLink(linkText: "Back to List of Pending Events", actionName: "ShowRequestsList")
+    </p>
+</body>
+</html>

@@ -23,20 +23,24 @@ namespace ManageMuseum.Controllers
         }
 
 
-        [HttpPost]
-        public ActionResult SheduleExhibition(EventViewModel eventView)
+        public ActionResult ShowRequestsList()
         {
+            var db = new OurContectDb();
 
-
+            var query = db.Events.Include(d => d.EventState).Include(d => d.EventType).Where(d => d.EventState.Id == 1).ToList();
+            ViewBag.Data = query;
             return View();
         }
 
-        public ActionResult ShowRequestsList()
+        public ActionResult EventRequestApprove()
         {
-           
+            return Content("Aprovar pedido");
+        }
 
-            var query = db.Events.Include(d => d.EventState).Include(d => d.EventType).Where(d => d.EventState.Id == 1);
-            ViewBag.Data =  query;
+        public ActionResult EventRequestDetails(string eventId)
+        {
+            var EventIdSelected = Int32.Parse(eventId);
+            ViewData["EventIdSelected"] = EventIdSelected;
             return View();
         }
     }
