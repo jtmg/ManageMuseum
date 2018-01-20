@@ -8,3 +8,4 @@ ManageMuseum/ManageMuseum/App_Data/ManageMuseum.Models.OurContectDb.mdf
 ManageMuseum/ManageMuseum/App_Data/ManageMuseum.Models.OurContectDb_log.ldf
 *.ide
 ManageMuseum/.vs/ManageMuseum/v15/.suo
+ManageMuseum/.vs/config/applicationhost.config
