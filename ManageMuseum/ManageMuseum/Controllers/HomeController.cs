@@ -10,7 +10,7 @@ namespace ManageMuseum.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("ConfirmLogin", "Login");
         }
 
         public ActionResult About()
