@@ -51,6 +51,17 @@ namespace ManageMuseum.Controllers
                         }
                     case 2:
                         {
+                            HttpCookie cookie = Request.Cookies["UserId"];
+                            if (cookie == null)
+                            {
+                                cookie = new HttpCookie("UserId");
+                                cookie.Value = userId.ToString();
+                            }
+                            else
+                            {
+                                cookie.Value = userId.ToString();
+                            }
+                            Response.Cookies.Add(cookie);
                             return RedirectToAction("SheduleExhibition", "ExhibitionShedule");
                         }
                 }

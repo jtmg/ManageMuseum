@@ -12,10 +12,10 @@ namespace ManageMuseum.Models
         public DateTime EnDate { get; set; }
 
         
-        public int RoomId { get; set; }
+        public string RoomName { get; set; }
         public int SpaceId { get; set; }
         public string EventType { get; set; }
         public string Description { get; set; }
-
+        public List<string> SpacesList { get; set; }
     }
 }

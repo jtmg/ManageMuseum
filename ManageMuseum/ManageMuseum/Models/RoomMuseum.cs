@@ -10,9 +10,9 @@ namespace ManageMuseum.Models
     {
         [Key]
         public int Id { get; set; }//number of the room
+        public string Name { get; set; }
         public double Area { get; set; }
         public int Floor { get; set; }
-
         public Event Event { get; set; }
 
         public ICollection<ArtPiece> ArtPieces { get; set; }
