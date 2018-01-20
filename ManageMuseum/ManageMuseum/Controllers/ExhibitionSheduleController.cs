@@ -23,21 +23,44 @@ namespace ManageMuseum.Controllers
         }
 
 
-        [HttpPost]
-        public ActionResult SheduleExhibition(EventViewModel eventView)
+        public ActionResult ShowRequestsList()
         {
-
-
+            var query = db.Events.Include(d => d.EventState).Include(d => d.EventType).Where(d => d.EventState.Id == 1).ToList();
+            ViewBag.Data = query;
             return View();
         }
 
-        public ActionResult ShowRequestsList()
+        public ActionResult EventRequestApprove(string eventId)
         {
-           
+            var EventIdApprove = Int32.Parse(eventId);
 
-            var query = db.Events.Include(d => d.EventState).Include(d => d.EventType).Where(d => d.EventState.Id == 1);
-            ViewBag.Data =  query;
+            EventState approvedState = db.EventStates.First(d => d.Name == "aceites");
+            
+            Event update = db.Events.Include(v => v.EventState).First(d => d.Id == EventIdApprove);
+            update.EventState = approvedState;
+            db.SaveChanges();
+            //FALTA COLOCAR AQUI UMA MENSAGEM DE AVISO QUE O PEDIDO DE EVENTO FOI APROVADO
+            return Redirect("ShowRequestsList");
+        }
+
+        public ActionResult EventRequestDetails(string eventId)
+        {
+            var EventIdSelected = Int32.Parse(eventId);
+
+            var queryEventDetails = db.Events.Include(d=>d.UserAccount).Include(d => d.EventState).Include(d => d.EventType).Single(s => s.Id == EventIdSelected);
+            ViewBag.evento = queryEventDetails;
+            ViewData["EventUserId"] = queryEventDetails.UserAccount.Id;
+            ViewData["EventUserFName"] = queryEventDetails.UserAccount.FirstName;
+            ViewData["EventUserLName"] = queryEventDetails.UserAccount.LastName;
+            ViewData["EventSelected"] = queryEventDetails.Id;
+            ViewData["EventName"] = queryEventDetails.Name;
+            ViewData["EventType"] = queryEventDetails.EventType.Name;
+            ViewData["EventStartDate"] = queryEventDetails.StartDate;
+            ViewData["EventEndDate"] = queryEventDetails.EnDate;
+            ViewData["EventDescription"] = queryEventDetails.Description;
+
             return View();
         }
     }
 }
+//var queryEventDetails = db.Events.Include(d => d.UserAccount).Include(d => d.EventState).Include(d => d.EventType).Where(s => s.Id == EventIdSelected).ToList();
