@@ -41,6 +41,7 @@ namespace ManageMuseum.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
                         Area = c.Double(nullable: false),
                         Floor = c.Int(nullable: false),
                         Event_Id = c.Int(),
@@ -57,6 +58,7 @@ namespace ManageMuseum.Migrations
                         StartDate = c.DateTime(nullable: false),
                         EnDate = c.DateTime(nullable: false),
                         Name = c.String(),
+                        Description = c.String(),
                         EventState_Id = c.Int(),
                         EventType_Id = c.Int(),
                         UserAccount_Id = c.Int(),
@@ -103,10 +105,10 @@ namespace ManageMuseum.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(nullable: false),
-                        LastName = c.String(nullable: false),
-                        Username = c.String(nullable: false),
-                        Password = c.String(nullable: false),
+                        FirstName = c.String(),
+                        LastName = c.String(),
+                        Username = c.String(),
+                        Password = c.String(),
                         ConfirmPassword = c.String(),
                         Role_Id = c.Int(),
                     })
