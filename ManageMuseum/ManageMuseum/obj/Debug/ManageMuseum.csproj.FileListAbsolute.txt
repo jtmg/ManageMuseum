@@ -128,3 +128,7 @@ C:\Users\jessi\source\repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\Man
 C:\Users\jessi\source\repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csproj.CoreCompileInputs.cache
 C:\Users\jessi\source\repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.dll
 C:\Users\jessi\source\repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.pdb
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\bin\EntityFramework.dll
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\bin\EntityFramework.SqlServer.dll
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\bin\EntityFramework.xml
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\bin\EntityFramework.SqlServer.xml
