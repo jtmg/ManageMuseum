@@ -15,7 +15,7 @@ namespace ManageMuseum.Controllers
         // GET: Catalog
         public ActionResult ListArtPieces()
         {
-            var query = db.ArtPieces.Include(V => V.ArtPieceState).ToList();
+            var query = db.ArtPieces.Include(d => d.ArtPieceState).Include(v => v.RoomMuseum).ToList();
             ViewBag.Data = query;
             return View();
         }
@@ -25,13 +25,14 @@ namespace ManageMuseum.Controllers
             return View();
         }
 
-        public ActionResult RemovePiece()
+        public ActionResult RemovePiece(string artpieceId)
         {
-            return View();
+            return Redirect("ListArtPieces");
         }
 
-        public ActionResult AttachPiece()
+        public ActionResult AttachPiece(string artpieceId)
         {
+            // Já temos aqui o id da peça a adicionar a um evento
             return Content("Insert art pieces to the event");
         }
     }

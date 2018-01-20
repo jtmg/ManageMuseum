@@ -240,6 +240,7 @@
     <Content Include="Views\ExhibitionShedule\EventRequestApprove.cshtml" />
     <Content Include="Views\ExhibitionShedule\EventRequestDetails.cshtml" />
     <Content Include="Views\Catalog\ListArtPieces.cshtml" />
+    <Content Include="Views\Catalog\AttachPiece.cshtml" />
     <Content Include="Views\Catalog\InsertArtPiece.cshtml" />
     <Content Include="Views\Catalog\RemovePiece.cshtml" />
   </ItemGroup>
