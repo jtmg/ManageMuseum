@@ -18,6 +18,7 @@ namespace ManageMuseum.Controllers
         {
             
 
+            var queryEventTypes = db.EventState.ToList();
             ViewBag.EventType = new SelectList(queryEventTypes,"Name","Name");
 
             var queryListSpaces = db.RoomMuseums.ToList();
