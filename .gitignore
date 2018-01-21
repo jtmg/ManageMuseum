@@ -3,6 +3,7 @@
 *.ide-wal
 *.ide
 *.ide
+<<<<<<< HEAD
 ManageMuseum/ManageMuseum/App_Data/ManageMuseum.Models.OurContectDb.mdf
 ManageMuseum/ManageMuseum/App_Data/ManageMuseum.Models.OurContectDb.mdf
 ManageMuseum/ManageMuseum/App_Data/ManageMuseum.Models.OurContectDb_log.ldf
@@ -12,3 +13,7 @@ ManageMuseum/.vs/ManageMuseum/v15/.suo
 =======
 *.mdf
 >>>>>>> FIGUEIRA
+=======
+*.ide
+>>>>>>> Figueira-work
+ManageMuseum/.vs/ManageMuseum/v15/.suo

@@ -86,4 +86,7 @@ namespace ManageMuseum.Controllers
         }
     }
 }
+<<<<<<< HEAD
 //var queryEventDetails = db.Events.Include(d => d.UserAccount).Include(d => d.EventState).Include(d => d.EventType).Where(s => s.Id == EventIdSelected).ToList();
+=======
+>>>>>>> Figueira-work
