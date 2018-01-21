@@ -223,7 +223,6 @@
     <Content Include="Views\ExhibitionShedule\ShowRequestsList.cshtml" />
     <Content Include="Views\ExhibitionShedule\EventRequestApprove.cshtml" />
     <Content Include="Views\ExhibitionShedule\EventRequestDetails.cshtml" />
-    <Content Include="Views\SheduleEvent\ApprovedExhibition.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
