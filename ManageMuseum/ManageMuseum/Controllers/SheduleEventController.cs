@@ -27,32 +27,20 @@ namespace ManageMuseum.Controllers
             return View();
         }
 
-        public ActionResult ApprovedExhibition()
-        {
-            var userId = Int32.Parse(Request.Cookies["UserId"].Value);
-            var eventType = db.EventTypes.Single(s => s.Name == "exposicao");
-            var eventState = db.EventStates.Single(s=>s.Name == "aceites");
-            var eventsToShow = db.Events.Include(d => d.UserAccount).Include(d=>d.EventType).Include(d=>d.EventState).Where(d=>d.UserAccount.Id == userId && d.EventType.Id == eventType.Id &&d.EventState.Id == eventState.Id ).ToList();
-            ViewBag.EventsToShow = eventsToShow;
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult ApprovedExhibition(EventViewModel even)
-        {
-            return View();
-        }
-
-
+       
         [HttpPost]
         public ActionResult SheduleEvent(EventViewModel events)
         {
             var eventType = events.EventType;
 <<<<<<< HEAD
             var getEventTypeRow = db.EventTypes.FirstOrDefault(s => s.Name == eventType);
+<<<<<<< HEAD
 =======
 >>>>>>> master
             var eventState = db.EventStates.Single(s => s.Id == 1);
+=======
+            var eventState = db.EventStates.Where(s => s.Id == 1).Single();
+>>>>>>> parent of c2eff40... listar pedidos aceites
             var userId = Int32.Parse(Request.Cookies["UserId"].Value);
             var userAccount = db.UserAccounts.Include(d=>d.Role).FirstOrDefault(s => s.Id == userId);
             var finalEvent = new Event() {Name = events.Name, StartDate = events.StartDate, EnDate = events.EnDate,Description = events.Description,EventType = getEventTypeRow, EventState = eventState,UserAccount = userAccount};
