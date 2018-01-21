@@ -27,7 +27,12 @@ namespace ManageMuseum.Controllers
 
         public ActionResult RemovePiece(string artpieceId)
         {
-            return Redirect("ListArtPieces");
+            var pieceStorageState = db.ArtPieceStates.Single(s=>s.Name == "armazem");
+            var pieceId = Int32.Parse(artpieceId);
+            var query = db.ArtPieces.Single(d => d.Id == pieceId);
+            query.ArtPieceState = pieceStorageState;
+            db.SaveChanges();
+            return Redirect("ListArtPieces");;
         }
 
         public ActionResult AttachPiece(string artpieceId)

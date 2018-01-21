@@ -9,78 +9,67 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>ListArtPieces</title>
+    @Styles.Render("~/Content/OurCSS.css")
 </head>
 <body>
-<div class="contain">
-    <h2> List of Art Pieces on Catalog</h2>
+    <div class="contain">
+        <h2> List of Art Pieces on Catalog</h2>
 
-    <table class="table">
-        <tr>
-            <th> # </th>
-            <th>Art Piece Name</th>
-            <th>Art Piece Location</th>
-            <th>Author</th>
-            <th>Year</th>
-            <th>Dimension</th>
-            <th>Description</th>
-        </tr>
-        @foreach (var item in @ViewBag.Data)
-        {
-            if (@item.ArtPieceState.Name == "armazem")
+        <table class="table table-hover table-responsive">
+            <tr>
+                <th> # </th>
+                <th>Art Piece Name</th>
+                <th>Art Piece State</th>
+                <th>Room</th>
+                <th>Author</th>
+                <th>Year</th>
+                <th>Dimension</th>
+                <th>Description</th>
+            </tr>
+            @foreach (var item in @ViewBag.Data)
             {
+                if (@item.ArtPieceState.Name == "armazem")
+                {
 
-                <tr>
-                    <td>
-                        @Html.ActionLink(linkText: "Remove form exihibition", actionName: "RemovePiece", controllerName: "Catalog", routeValues: new { artpieceId = @item.Id }, htmlAttributes: null)
-                        <hr /> @Html.ActionLink(linkText: "Attach to event", actionName: "AttachPiece", controllerName: "Catalog", routeValues: new { artpieceId = @item.Id }, htmlAttributes: null)
-                    </td>
-                    <td style="vertical-align:middle;">@item.Name</td>
-                    <td style="vertical-align:middle;">@item.ArtPieceState.Name</td>
-                    @*<td rowspan="2">@item.RoomMuseum.Name</td>*@ @*DESCOMENTAR DEPOIS DE TER O ATRIBUTO NAME NA TABELA ROOMMUSEUM*@
-                    <td style="vertical-align:middle;">@item.Author</td>
-                    <td style="vertical-align:middle;">@item.Year</td>
-                    <td style="vertical-align:middle;">@item.Dimension</td>
-                    <td style="vertical-align:middle;">@item.Description</td>
-                </tr>
-             
-            }
-            if (@item.ArtPieceState.Name == "exposicao")
-            {
-                <tr>
-                    <td style="vertical-align:middle;">@Html.ActionLink(linkText: "Remove form exihibition", actionName: "RemovePiece", controllerName: "Catalog", routeValues: new { artpieceId = @item.Id }, htmlAttributes: null)</td>
-                    <td style="vertical-align:middle;">@item.Name</td>
-                    <td style="vertical-align:middle;">@item.ArtPieceState.Name</td>
-                    @*<td rowspan="2">@item.RoomMuseum.Name</td>*@ @*DESCOMENTAR DEPOIS DE TER O ATRIBUTO NAME NA TABELA ROOMMUSEUM*@
-                    <td style="vertical-align:middle;">@item.Author</td>
-                    <td style="vertical-align:middle;">@item.Year</td>
-                    <td style="vertical-align:middle;">@item.Dimension</td>
-                    <td style="vertical-align:middle;">@item.Description</td>
-                </tr>
-            }
+                    <tr>
+                        <td class="table_td_center">
+                            @Html.ActionLink(linkText: "Attach to event", actionName: "AttachPiece", controllerName: "Catalog", routeValues: new { artpieceId = @item.Id }, htmlAttributes: null)
+                        </td>
+                        <td class="table_td_center">@item.Name</td>
+                        <td class="table_td_center">@item.ArtPieceState.Name</td>
+                        <td class="table_td_center"> - </td>
+                        <td class="table_td_center">@item.Author</td>
+                        <td class="table_td_center">@item.Year</td>
+                        <td class="table_td_center">@item.Dimension</td>
+                        <td class="table_td_center">@item.Description</td>
+                    </tr>
 
-        @*<td>
-                @Html.ActionLink(linkText: "View Details", actionName: "EventRequestDetails", controllerName: "ExhibitionShedule", routeValues: new { eventId = @item.Id }, htmlAttributes: null)
-            |   @Html.ActionLink(linkText: "Approve", actionName: "EventRequestApprove", controllerName: "ExhibitionShedule", routeValues: new { eventId = @item.Id }, htmlAttributes: null)
-        </td>*@
+                }
+                if (@item.ArtPieceState.Name == "exposicao")
+                {
+                    <tr>
+                        <td class="table_td_center">@Html.ActionLink(linkText: "Remove form exihibition", actionName: "RemovePiece", controllerName: "Catalog", routeValues: new { artpieceId = @item.Id }, htmlAttributes: null)</td>
+                        <td class="table_td_center">@item.Name</td>
+                        <td class="table_td_center">@item.ArtPieceState.Name</td>
+                        <td class="table_td_center">@item.RoomMuseum.Name</td>
+                        <td class="table_td_center">@item.Author</td>
+                        <td class="table_td_center">@item.Year</td>
+                        <td class="table_td_center">@item.Dimension</td>
+                        <td class="table_td_center">@item.Description</td>
+                    </tr>
+                }
             }
 
-    </table>
-    <hr/><hr/>
-    <p>
-        @Html.ActionLink("Insert New", "InsertArtPiece")
-    </p>
-    <p>
-        @Html.ActionLink("Remove Seleted Pieces", "RemovePiece")
-    </p>
-    <p>
-        @Html.ActionLink("Attach Art Pieces to one Exihibition", "AttachPiece")
-    </p>
-    <hr/><hr/>
+        </table>
 
-    <p>
-        @Html.ActionLink(linkText: "Back to Home Page", actionName: "SheduleExhibition", controllerName: "ExhibitionShedule")
-    </p>
-</div>
+        <hr /><hr />
+
+        <p>@Html.ActionLink("Insert new Art Piece", "InsertArtPiece")</p>
+
+        <hr /><hr />
+
+        <p>@Html.ActionLink(linkText: "Back to Home Page", actionName: "SheduleExhibition", controllerName: "ExhibitionShedule")</p>
+    </div>
 
 </body>
 </html>

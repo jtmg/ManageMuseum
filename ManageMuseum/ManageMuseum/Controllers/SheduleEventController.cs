@@ -18,7 +18,7 @@ namespace ManageMuseum.Controllers
         {
             
 
-            var queryEventTypes = db.EventTypes.ToList();
+            var queryEventTypes = db.EventState.ToList();
             ViewBag.EventType = new SelectList(queryEventTypes,"Name","Name");
 
             var queryListSpaces = db.RoomMuseums.ToList();
@@ -32,7 +32,7 @@ namespace ManageMuseum.Controllers
         public ActionResult SheduleEvent(EventViewModel events)
         {
             var eventType = events.EventType;
-            var getEventTypeRow = db.EventTypes.FirstOrDefault(s => s.Name == eventType);
+            var getEventTypeRow = db.EventState.FirstOrDefault(s => s.Name == eventType);
             var eventState = db.EventStates.Single(s => s.Id == 1);
             var userId = Int32.Parse(Request.Cookies["UserId"].Value);
             var userAccount = db.UserAccounts.Include(d=>d.Role).FirstOrDefault(s => s.Id == userId);
