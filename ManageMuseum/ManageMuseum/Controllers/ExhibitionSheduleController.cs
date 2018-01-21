@@ -84,6 +84,19 @@ namespace ManageMuseum.Controllers
 
             return View();
         }
+
+        public ActionResult EventRequestApprove()
+        {
+            return Content("Aprovar pedido");
+        }
+       
+        public ActionResult EventRequestDetails(string eventId)
+        {
+            var EventIdSelected = Int32.Parse(eventId);
+            ViewData["EventIdSelected"] = EventIdSelected;
+            return View();
+        }
+        
     }
 }
 <<<<<<< HEAD

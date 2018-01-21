@@ -87,6 +87,10 @@ C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\bin\EntityFra
 C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\bin\EntityFramework.SqlServer.dll
 C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\bin\EntityFramework.xml
 C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\bin\EntityFramework.SqlServer.xml
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.Migrations._1st.resources
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csproj.GenerateResource.Cache
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.Migrations._2nd.resources
+C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.Migrations._3rd.resources
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\bin\ApplicationInsights.config
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\bin\ManageMuseum.dll.config
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\bin\ManageMuseum.dll
@@ -130,6 +134,7 @@ D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\bin\Microsoft.AI.De
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\bin\Microsoft.AI.WindowsServer.xml
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\bin\Microsoft.AI.Web.xml
+<<<<<<< HEAD
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csprojResolveAssemblyReference.cache
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csproj.CoreCompileInputs.cache
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.dll
@@ -138,3 +143,13 @@ C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\Man
 C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csproj.GenerateResource.Cache
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.Migrations._1st.resources
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csproj.GenerateResource.Cache
+=======
+D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.Migrations._1st.resources
+D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.Migrations._2nd.resources
+D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.Migrations._3rd.resources
+D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csproj.GenerateResource.Cache
+D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csproj.CoreCompileInputs.cache
+D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.dll
+D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.pdb
+D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csprojResolveAssemblyReference.cache
+>>>>>>> Figueira-work

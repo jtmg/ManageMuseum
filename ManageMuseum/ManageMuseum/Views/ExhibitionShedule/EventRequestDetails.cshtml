@@ -5,6 +5,9 @@
 }
 =======
 ﻿
+@{
+    Layout = "~/Views/Shared/_SpaceManagerSharedLayout.cshtml";
+}
 
 >>>>>>> Figueira-work
 <!DOCTYPE html>
@@ -40,4 +43,13 @@
         </body>
         </html>
 =======
+<div>
+    <h1> Chegou aos detalhes de evento</h1>
+</div>
+    <p> Event Number: @ViewData["EventIdSelected"]</p>
+    <p>
+        @Html.ActionLink("Back to List of Pending Events", "ShowRequestsList")
+    </p>
+</body>
+</html>
 >>>>>>> Figueira-work

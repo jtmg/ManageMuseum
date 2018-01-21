@@ -230,6 +230,7 @@
     <Content Include="Views\ExhibitionShedule\EventRequestDetails.cshtml" />
     <Content Include="Views\SheduleEvent\ApprovedExhibition.cshtml" />
 =======
+    <Content Include="Views\ExhibitionShedule\EventRequestDetails.cshtml" />
 >>>>>>> Figueira-work
   </ItemGroup>
   <ItemGroup>
