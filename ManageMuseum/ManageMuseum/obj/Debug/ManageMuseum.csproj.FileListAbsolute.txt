@@ -134,7 +134,5 @@ D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMus
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csproj.CoreCompileInputs.cache
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.dll
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.pdb
-C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.Migrations._1st.resources
-C:\Users\topog\Source\Repos\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csproj.GenerateResource.Cache
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.Migrations._1st.resources
 D:\Figueira\Documents\ManageMuseum\ManageMuseum\ManageMuseum\obj\Debug\ManageMuseum.csproj.GenerateResource.Cache
