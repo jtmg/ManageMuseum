@@ -35,6 +35,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -154,6 +156,7 @@
     <Compile Include="Controllers\ExhibitionSheduleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MapController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\SheduleEventController.cs" />
     <Compile Include="Global.asax.cs">
@@ -199,6 +202,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\FloorOne.jpg" />
+    <Content Include="Images\FloorTwo.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -238,6 +243,7 @@
     <Content Include="Views\ExhibitionShedule\ShowRequestsList.cshtml" />
     <Content Include="Views\ExhibitionShedule\EventRequestApprove.cshtml" />
     <Content Include="Views\ExhibitionShedule\EventRequestDetails.cshtml" />
+    <Content Include="Views\Map\Map.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

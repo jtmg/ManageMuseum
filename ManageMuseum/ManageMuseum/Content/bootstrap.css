@@ -5965,7 +5965,7 @@ button.close {
     visibility: visible;
 }
 
-    .tooltip.in {
+       .tooltip.in {
         opacity: 0.9;
         filter: alpha(opacity=90);
     }
@@ -7086,5 +7086,7 @@ td.visible-print {
     td.hidden-print {
         display: none !important;
     }
+
+    
 }
 
